@@ -19,20 +19,20 @@ class PermissionSeeder extends Seeder
     {
         $webPermissions = collect([
             # Dahboard related permission
-            ['name' => 'read-dashboard', 'label' => 'Baca Dashboard', 'group' => null],
+            ['name' => 'read-dashboard', 'label' => 'Baca Dashboard'],
 
             # Users related permission
-            ['name' => 'read-users', 'label' => 'Baca User', 'group' => null],
-            ['name' => 'create-users', 'label' => 'Buat User', 'group' => null],
-            ['name' => 'update-users', 'label' => 'Edit User', 'group' => null],
-            ['name' => 'delete-users', 'label' => 'Hapus User', 'group' => null],
+            ['name' => 'read-users', 'label' => 'Baca User'],
+            ['name' => 'create-users', 'label' => 'Buat User'],
+            ['name' => 'update-users', 'label' => 'Edit User'],
+            ['name' => 'delete-users', 'label' => 'Hapus User'],
 
             # Roles related permission
-            ['name' => 'read-roles', 'label' => 'Baca Role', 'group' => null],
-            ['name' => 'create-roles', 'label' => 'Buat Role', 'group' => null],
-            ['name' => 'update-roles', 'label' => 'Edit Role', 'group' => null],
-            ['name' => 'delete-roles', 'label' => 'Hapus Role', 'group' => null],
-            ['name' => 'change-role', 'label' => 'Edit Hak Akses', 'group' => null],
+            ['name' => 'read-roles', 'label' => 'Baca Role'],
+            ['name' => 'create-roles', 'label' => 'Buat Role'],
+            ['name' => 'update-roles', 'label' => 'Edit Role'],
+            ['name' => 'delete-roles', 'label' => 'Hapus Role'],
+            ['name' => 'change-role', 'label' => 'Edit Hak Akses'],
 
         ]);
 

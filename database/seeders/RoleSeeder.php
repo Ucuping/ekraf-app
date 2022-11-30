@@ -18,8 +18,8 @@ class RoleSeeder extends Seeder
         $developer = Role::create([
             'name' => 'Developer',
             'guard_name' => 'web',
-            'group' => 'root',
-            'is_default' => true
+            // 'group' => 'root',
+            // 'is_default' => true
         ]);
 
         $developer->givePermissionTo([
