@@ -23,7 +23,7 @@
                     <thead>
                         <th>No.</th>
                         <th>Nama Ekraf</th>
-                        {{-- <th>Nama Pemilik</th> --}}
+                        <th>Kategori</th>
                         <th>Alamat</th>
                         <th>Status</th>
                         <th></th>

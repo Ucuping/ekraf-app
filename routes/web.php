@@ -59,6 +59,7 @@ Route::prefix('apps')->middleware('auth')->group(function () {
         Route::get('', [CompanyValidationController::class, 'index'])->name('apps.validations');
         Route::get('getData', [CompanyValidationController::class, 'getData'])->name('apps.validations.getData');
         Route::get('{company}/detail', [CompanyValidationController::class, 'detail'])->name('apps.validations.detail');
+        Route::post('{company}/approved', [CompanyValidationController::class, 'approved'])->name('apps.validations.approved');
     });
 });
 

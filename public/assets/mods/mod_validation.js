@@ -29,6 +29,10 @@ table = initTable('#dataTable', [
         }
     },
     {
+        name: 'category.name',
+        data: 'category.name'
+    },
+    {
         name: 'address',
         data: 'address'
     },
@@ -51,7 +55,7 @@ table = initTable('#dataTable', [
             var render = ``
 
             if (userPermissions.includes('company-validations')) {
-                render += `<button class="btn btn-outline-success btn-sm" data-toggle="edit" data-id="${data}"><i class="fas fa-check"></i></button> `
+                render += `<button class="btn btn-outline-success btn-sm" data-toggle="approved" data-id="${data}"><i class="fas fa-check"></i></button> `
                 render += `<button class="btn btn-outline-primary btn-sm" data-toggle="ajax" data-target="${window.location.href}/${data}/detail"><i class="fas fa-eye"></i></button> `
                 render += `<button class="btn btn-outline-danger btn-sm" data-toggle="delete" data-id="${data}"><i class="fas fa-times"></i></button> `
             }
@@ -62,4 +66,60 @@ table = initTable('#dataTable', [
             return render
         }
     }
-])
+], function () {
+    $('button[data-toggle="approved"]').unbind().on('click', function (e) {
+        e.preventDefault()
+
+        Swal.fire({
+            title: 'Konfirmasi?',
+            icon: 'question',
+            text: 'Apakah anda yakin?',
+            showCancelButton: true,
+            confirmButtonCollor: '#3085d6',
+            cancelButtonCollor: '#d33',
+            confirmButtonText: 'Yes'
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Plase Wait...',
+                    text: 'Sedang memproses data',
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading()
+                    }
+                })
+
+                const res = await fetch(`${window.location.href}/${$(this).data('id')}/approved`, {
+                    method: 'POST',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                        'Content-Type': 'application/json'
+                    }
+                })
+
+                Swal.close()
+                if (res.status == 200) {
+                    const data = await res.json()
+                    Swal.fire({
+                        title: 'Success',
+                        icon: 'success',
+                        text: data.message
+                    }).then(result => {
+                        if (typeof $(this).data('callback') != 'undefined') {
+                            $('v-content-rendering').html('')
+                            // pushState($(this).data('callback'))
+                            window.location.assign($(this).data('callback'))
+                        } else {
+                            if (typeof table != 'undefined') {
+                                table.ajax.reload()
+                            } else {
+                                handleView()
+                            }
+                        }
+                    })
+                }
+            }
+        })
+    })
+})
