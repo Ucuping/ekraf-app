@@ -20,22 +20,25 @@
     href="{{ asset('assets/images/logo/favicon.png') }}"
     type="image/png"
     />
-    
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/@fortawesome/fontawesome-free/css/all.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/choices.js/public/assets/styles/choices.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/dragula/dragula.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/filepond/filepond.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/extensions/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/summernote/summernote.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/sweetalert2/sweetalert2.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/toastify-js/src/toastify.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/waitme/waitMe.css') }}" />
     
     <link rel="stylesheet" href="{{ asset('assets/css/main/app.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/auth.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/pages/auth.css') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/main/app-dark.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/shared/iconly.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/error.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/pages/error.css') }}" /> --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
   </head>
 
   <body id="documentLoader">

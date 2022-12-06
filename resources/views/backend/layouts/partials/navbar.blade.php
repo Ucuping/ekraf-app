@@ -1,42 +1,75 @@
-<nav class="main-navbar">
-    <div class="container">
-      <ul>
+<nav class="app-menu main-navbar">
+    <div class="container navbar-box">
+      <ul class="navbar-i">
+        @can('read-dashboard')
         <li class="menu-item">
-          <a href="{{ route('dashboard') }}" data-toggle="ajax" class="menu-link">
-            <span><i class="fas fa-home"></i> Dashboard</span>
+          <a href="{{ route('apps.dashboard') }}" data-toggle="ajax" class="menu-link">
+            <span><i class="fas fa-home"></i> Beranda</span>
           </a>
         </li>
-        @canany(['read-users', 'read-roles'])
+        @endcan
+        @can('read-categories')
+        <li class="menu-item">
+          <a href="{{ route('apps.dashboard') }}" data-toggle="ajax" class="menu-link">
+            <span><i class="fas fa-list"></i> Kategori Ekraf</span>
+          </a>
+        </li>
+        @endcan
+        @can('read-companies')
+        <li class="menu-item">
+          <a href="{{ route('apps.dashboard') }}" data-toggle="ajax" class="menu-link">
+            <span><i class="fas fa-store"></i> Ekraf Milikmu</span>
+          </a>
+        </li>
+        @endcan
+        @can('company-validations')
+        <li class="menu-item">
+          <a href="{{ route('apps.validations') }}" data-toggle="ajax" class="menu-link">
+            <span><i class="fas fa-check-square"></i> Validasi Ekraf</span>
+          </a>
+        </li>
+        @endcan
+        {{-- @can('read-announcements')
+        <li class="menu-item">
+          <a href="{{ route('apps.dashboard') }}" data-toggle="ajax" class="menu-link">
+            <span><i class="fas fa-newspaper"></i> Berita</span>
+          </a>
+        </li>
+        @endcan --}}
+        {{-- @canany(['read-users', 'read-roles'])
           <li class="menu-item has-sub">
             <a href="javascript:void(0)" class="menu-link">
-              <span><i class="fas fa-users"></i> User Management</span>
+              <span><i class="fas fa-user"></i> User Management</span>
             </a>
             <div class="submenu">
               <!-- Wrap to submenu-group-wrapper if you want 3-level submenu. Otherwise remove it. -->
               <div class="submenu-group-wrapper">
                 <ul class="submenu-group">
+                  @can('read-users')
                   <li class="submenu-item">
                     <a
                       href="{{ url('/') }}/apps/users"
                       class="submenu-link"
                       data-toggle="ajax"
-                      >Users</a
+                      >User</a
                     >
                   </li>
-
+                  @endcan
+                  @can('read-roles')
                   <li class="submenu-item">
                     <a
-                      href="javascript:void(0)"
+                      href="{{ route('apps.roles') }}"
                       class="submenu-link"
                       data-toggle="ajax"
-                      >Roles</a
+                      >Role</a
                     >
                   </li>
+                  @endcan
                 </ul>
               </div>
             </div>
           </li>
-        @endcanany
+        @endcanany --}}
       </ul>
     </div>
   </nav>

@@ -27,6 +27,7 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
+        'picture',
         'is_active',
     ];
 
@@ -50,4 +51,9 @@ class User extends Authenticatable
     ];
 
     protected $appends = ['hashid'];
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
 }

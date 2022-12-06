@@ -11,7 +11,7 @@
           <p class="fs-5 text-gray-600">
             The page you are looking not found.
           </p>
-          <a href="{{ route('dashboard') }}" data-toggle="ajax" class="btn btn-lg btn-outline-primary mt-3"
+          <a href="{{ route('apps.dashboard') }}" data-toggle="ajax" class="btn btn-lg btn-outline-primary mt-3"
             >Go Dashboard</a
           >
         </div>

@@ -3,14 +3,14 @@
 use Illuminate\Support\Facades\Auth;
 
 if (!function_exists('customView')) {
-    function customView($view, $data = [])
+    function customView($view, $data = [], $prefix = 'backend')
     {
         if (\Request::ajax()) {
             // return dd('aa');
-            return view('backend.' . $view, $data);
+            return view($prefix . '.' . $view, $data);
         } else {
             // return dd('bb');
-            return view('backend.layouts.app', $data);
+            return view($prefix . '.layouts.app', $data);
         }
     }
 }
@@ -46,5 +46,13 @@ if (!function_exists('getUserPermissions')) {
             });
             return implode(',', $permissionsName->toArray());
         }
+    }
+}
+
+if (!function_exists('randomFileName')) {
+    function randomFileName($fileName, $file)
+    {
+        $fileName = $fileName . '_' . time() . rand(0, 999999999) . '_' . rand(0, 99999999) . '.' . $file->getClientOriginalExtension();
+        return $fileName;
     }
 }

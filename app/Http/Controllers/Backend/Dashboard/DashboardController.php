@@ -14,6 +14,6 @@ class DashboardController extends Controller
             'title' => 'Dashboard'
         ];
 
-        return customView('dashboard.index', $data);
+        return customView('dashboard.index', $data, 'backend');
     }
 }

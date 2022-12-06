@@ -12,7 +12,7 @@
             The website is currently unaivailable. Try again later or contact
             the developer.
           </p>
-          <a href="{{ route('dashboard') }}" data-toggle="ajax" class="btn btn-lg btn-outline-primary mt-3"
+          <a href="{{ route('apps.dashboard') }}" data-toggle="ajax" class="btn btn-lg btn-outline-primary mt-3"
             >Go Dashboard</a
           >
         </div>

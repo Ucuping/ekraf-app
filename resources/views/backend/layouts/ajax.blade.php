@@ -1,18 +1,21 @@
 <div class="container-fluid">
-    {{-- start page title --}}
-    <div class="row mb-3">
-        <div class="col-12">
-            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+    <div class="intro-y">
+        <div class="page-title mb-3">
+            <div class="row">
+              <div class="col-12 col-md-6 order-md-1 order-last">
                 <h4 class="mb-sm-0">{{ $title ?? 'Untitled Page' }}</h4>
-
-                <div class="page-title-right">
-                    @yield('bradcrumb')
-                </div>
+              </div>
+              <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                  @yield('breadcrumb')
+                </nav>
+              </div>
             </div>
         </div>
+        <section class="section">
+            @yield('content')
+        </section>
     </div>
-
-    @yield('content')
 </div>
 
 <script>
@@ -27,10 +30,10 @@
 @if (isset($mods))
     @if (is_array($mods))
         @foreach ($mods as $mod)
-            <script src="{{ asset('mods/mod_' . $mod . '.js') }}"></script>
+            <script src="{{ asset('assets/mods/mod_' . $mod . '.js') }}"></script>
         @endforeach
     @else
-        <script src="{{ asset('mods/mod_' . $mod . '.js') }}"></script>
+        <script src="{{ asset('assets/mods/mod_' . $mods . '.js') }}"></script>
     @endif
 @endif
 

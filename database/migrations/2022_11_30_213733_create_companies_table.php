@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->string('name');
             $table->string('owner_identification_number');
@@ -22,11 +23,13 @@ return new class extends Migration
             $table->string('owner_name');
             $table->text('address');
             $table->text('description');
-            $table->string('logo')->nullable();
-            $table->enum('social_media', ['facebook', 'instagram', 'twitter'])->nullable();
-            $table->string('social_media_link')->nullable();
+            $table->string('logo')->default('default.svg');
+            $table->string('facebook_username')->nullable();
+            $table->string('instagram_username')->nullable();
+            $table->string('twitter_username')->nullable();
             $table->enum('status', ['approved', 'rejected', 'pending'])->default('pending');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict')->onUpdate('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('restrict')->onUpdate('cascade');
         });
     }

@@ -17,10 +17,52 @@ class CategorySeeder extends Seeder
     {
         Category::insert([
             [
-                'name' => 'Teknologi'
+                'name' => 'Startup'
             ],
             [
-                'name' => 'Alat Tradisional'
+                'name' => 'Arsitektur'
+            ],
+            [
+                'name' => 'Desain Interior'
+            ],
+            [
+                'name' => 'Musik'
+            ],
+            [
+                'name' => 'Seni Rupa'
+            ],
+            [
+                'name' => 'Desain Produk'
+            ],
+            [
+                'name' => 'Fashion'
+            ],
+            [
+                'name' => 'Kuliner'
+            ],
+            [
+                'name' => 'Animasi dan Video'
+            ],
+            [
+                'name' => 'Fotografi'
+            ],
+            [
+                'name' => 'Desain Komunikasi Visual'
+            ],
+            [
+                'name' => 'Televisi dan Radio'
+            ],
+            [
+                'name' => 'Kriya'
+            ],
+            [
+                'name' => 'Periklanan'
+            ],
+            [
+                'name' => 'Seni Pertunjukan'
+            ],
+            [
+                'name' => 'Aplikasi dan Game'
             ],
         ]);
     }

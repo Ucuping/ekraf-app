@@ -1,3 +1,5 @@
+@extends('backend.layouts.auth')
+@section('content')
 <div id="auth">
     <div class="row h-100">
       <div class="col-lg-5 col-12">
@@ -12,7 +14,7 @@
             Log in with your data that you entered during registration.
           </p>
 
-          <form action="{{ url('/login') }}" method="POST" data-request="ajax" data-callback="{{ route('dashboard') }}">
+          <form action="{{ url('/login') }}" method="POST" data-request="ajax" data-callback="{{ route('apps.dashboard') }}">
             @csrf
             <div class="form-group position-relative has-icon-left mb-4">
               <input
@@ -66,16 +68,11 @@
         </div>
       </div>
       <div class="col-lg-7 d-none d-lg-block">
-        <div id="auth-right"></div>
+        <img src="{{ asset('assets/images/login-img.svg') }}" alt="" class="img-fluid">
+        {{-- <div id="auth-right">
+        </div> --}}
       </div>
     </div>
   </div>
-
-  <script>
-    document.title = "{{ $title . ' | DINAS EKONOMI KREATIF KAB. JEMBER' }}"
-
-    if (!window.jQuery) {
-        document.body.innerHTML = ""
-        window.location.reload()
-    }
-  </script>
+    
+@endsection

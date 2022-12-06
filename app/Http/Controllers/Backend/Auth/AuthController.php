@@ -13,11 +13,11 @@ class AuthController extends Controller
         $data = [
             'title' => 'Login'
         ];
-        return customView('auth.index', $data);
+        return view('backend.auth.index', $data);
     }
 
     public function check()
     {
-        return customView('layouts.content-wrapper');
+        return customView('layouts.content-wrapper', [], 'backend');
     }
 }

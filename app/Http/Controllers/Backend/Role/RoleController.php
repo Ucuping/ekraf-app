@@ -15,11 +15,11 @@ class RoleController extends Controller
     public function index()
     {
         $data = [
-            'title' => 'Roles',
+            'title' => 'Role',
             'mods' => 'role'
         ];
 
-        return customView('role.index', $data);
+        return customView('role.index', $data, 'backend');
     }
 
     public function getData()
@@ -33,7 +33,6 @@ class RoleController extends Controller
             Role::create([
                 'name' => $request->name,
                 'guard_name' => 'web',
-                'group' => $request->group
             ]);
 
             return $this->successResponse('Data role berhasil ditambahkan');
@@ -50,7 +49,7 @@ class RoleController extends Controller
     public function update(Role $role, Request $request)
     {
         try {
-            $role->update($request->only(['name', 'group']));
+            $role->update($request->only(['name']));
             return $this->successResponse('Data role berhasil diupdate');
         } catch (Exception $e) {
             return $this->exceptionResponse($e);
@@ -70,33 +69,32 @@ class RoleController extends Controller
 
     public function getPermissions(Role $role)
     {
-        try {
-            $remappedPermissions = [];
-            $permissions = Permission::all();
+        $remappedPermissions = [];
+        $permissions = Permission::all();
 
-            $permissions->map(function ($permission) use ($role, $remappedPermissions) {
-                $explodePermissions = explode('-', $permission->name);
-                $slicePermissions = array_slice($explodePermissions, 1);
-                $implodePermissions = implode('-', $slicePermissions);
-                $permission['is_checked'] = $role->hasPermissionTo($permission->name);
-                $remappedPermissions[$implodePermissions][] = $permission;
-            });
-
-            $data = [
-                'role' => $role,
-                'permissions' => $remappedPermissions
-            ];
-
-            return $this->successResponse(null, $data);
-        } catch (Exception $e) {
-            return $this->exceptionResponse($e);
+        foreach ($permissions as $permission) {
+            $explodePermissions = explode('-', $permission->name);
+            $slicePermissions = array_slice($explodePermissions, 1);
+            $implodePermissions = implode('-', $slicePermissions);
+            $remappedPermissions[$implodePermissions][] = $permission;
         }
+
+
+        $data = [
+            'title' => 'Edit Hak Akses',
+            'mods' => 'role',
+            'role' => $role,
+            'permissions' => $remappedPermissions
+        ];
+
+        return customView('role.permission', $data, 'backend');
     }
 
     public function changePermissions(Request $request, Role $role)
     {
         try {
             $role->syncPermissions($request->permission);
+            return $this->successResponse('Data hak akses berhasil diupdate');
         } catch (Exception $e) {
             return $this->exceptionResponse($e);
         }

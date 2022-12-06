@@ -16,7 +16,7 @@
               aria-expanded="false"
             >
               <div class="avatar avatar-md2">
-                <img src="{{ asset('assets/images/faces/1.jpg') }}" alt="Avatar" />
+                <img src="{{ asset('storage/images/users/' . getInfoLogin()->picture) }}" alt="Avatar" />
               </div>
               <div class="text">
                 <h6 class="user-dropdown-name">{{ getInfoLogin()->name }}</h6>
@@ -49,4 +49,4 @@
     </div>
     @include('backend.layouts.partials.navbar')
   </header>
-  <script src="{{ asset('assets/js/pages/horizontal-layout.js') }}"></script>
+  {{-- <script src="{{ asset('assets/js/pages/horizontal-layout.js') }}"></script> --}}

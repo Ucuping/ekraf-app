@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
+        $root = User::create([
             'identity_number' => '12345678910',
             'name' => 'Root',
             'username' => 'root',
@@ -24,5 +24,23 @@ class UserSeeder extends Seeder
             'password' => Hash::make('root'),
             'is_active' => true,
         ])->assignRole('Developer');
+
+        $admin = User::create([
+            'identity_number' => '1234567',
+            'name' => 'Admin',
+            'username' => 'admin',
+            'email' => 'admin@ekraf.com',
+            'password' => Hash::make('admin'),
+            'is_active' => true,
+        ])->assignRole('Admin');
+
+        $ekraf = User::create([
+            'identity_number' => '12345678',
+            'name' => 'Demo Ekraf',
+            'username' => 'ekraf',
+            'email' => 'ekraf@ekraf.com',
+            'password' => Hash::make('1234'),
+            'is_active' => true,
+        ])->assignRole('Ekraf');
     }
 }

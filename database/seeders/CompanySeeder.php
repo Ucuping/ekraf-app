@@ -17,6 +17,7 @@ class CompanySeeder extends Seeder
     {
         Company::insert([
             [
+                'user_id' => 3,
                 'category_id' => 1,
                 'name' => 'CV. CIPTA KARYA SEJAHTERA',
                 'owner_identification_number' => '123456789',

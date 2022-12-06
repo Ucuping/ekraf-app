@@ -15,6 +15,7 @@ use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
 use Laravel\Fortify\Contracts\LoginResponse;
 use Laravel\Fortify\Contracts\LogoutResponse;
+use Laravel\Fortify\Contracts\RegisterResponse;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -44,6 +45,16 @@ class FortifyServiceProvider extends ServiceProvider
                 ]);
             }
         });
+
+        $this->app->instance(RegisterResponse::class, new class implements RegisterResponse
+        {
+            public function toResponse($request)
+            {
+                return response()->json([
+                    'message' => 'Register Success'
+                ]);
+            }
+        });
     }
 
     /**
@@ -65,7 +76,7 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::authenticateUsing(function (Request $request) {
             $user = User::where('username', $request->username)->first();
 
-            if (!is_null($user) and Hash::check($request->password, $user->password)) {
+            if (!is_null($user) and $user->is_active == true and Hash::check($request->password, $user->password)) {
                 return $user;
             }
         });
