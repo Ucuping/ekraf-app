@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\frontend\Category\CategoryController;
+
 use App\Http\Controllers\Backend\Auth\AuthController;
 use App\Http\Controllers\Backend\CompanyValidation\CompanyValidationController;
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
@@ -22,6 +24,67 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function () {
+    return view('frontend.index');
+});
+Route::get('/startup', function () {
+    return view('frontend.startup');
+});
+Route::get('/arsitektur', function () {
+    return view('frontend.arsitektur');
+});
+Route::get('/interior', function () {
+    return view('frontend.interior');
+});
+Route::get('/musik', function () {
+    return view('frontend.musik');
+});
+Route::get('/seni', function () {
+    return view('frontend.seni');
+});
+Route::get('/produk', function () {
+    return view('frontend.produk');
+});
+Route::get('/fashion', function () {
+    return view('frontend.fashion');
+});
+Route::get('/kuliner', function () {
+    return view('frontend.kuliner');
+});
+Route::get('/film', function () {
+    return view('frontend.film');
+});
+Route::get('/animasi', function () {
+    return view('frontend.animasi');
+});
+Route::get('/fotografi', function () {
+    return view('frontend.fotografi');
+});
+Route::get('/komunikasi', function () {
+    return view('frontend.komunikasi');
+});
+Route::get('/televisi', function () {
+    return view('frontend.televisi');
+});
+Route::get('/kriya', function () {
+    return view('frontend.kriya');
+});
+Route::get('/periklanan', function () {
+    return view('frontend.periklanan');
+});
+Route::get('/pertunjukan', function () {
+    return view('frontend.pertunjukan');
+});
+Route::get('/aplikasi', function () {
+    return view('frontend.aplikasi');
+});
+Route::get('/berita1', function () {
+    return view('frontend.berita1');
+});
+
+
+Route::get('/category', [CategoryController::class, 'detail'])->name('category');
 
 Route::get('/auth', [AuthController::class, 'index'])->name('auth')->middleware('guest');
 Route::get('/auth/check', [AuthController::class, 'check'])->name('auth.check');
