@@ -1,11 +1,11 @@
-body {
+/* body {
     background-color: #fff
 }
 
 #auth {
     height: 100vh;
     overflow-x: hidden
-}
+} */
 
 /* #auth #auth-right {
     background: url(../../../assets/images/4853433.png?45649b87e0b3f50bfa1372c6cdb4595f), linear-gradient(90deg, #2d499d, #3f5491);
@@ -16,7 +16,7 @@ body {
     height: 100%
 } */
 
-#auth #auth-left {
+/* #auth #auth-left {
     padding: 5rem 8rem
 }
 
@@ -31,23 +31,31 @@ body {
     line-height: 2.5rem
 }
 
-#auth #auth-left .auth-logo {
-    margin-bottom: 7rem
+#auth #auth-left .auth-logo-signup {
+    margin-bottom: 2rem
+}
+#auth #auth-left .auth-logo-login {
+    margin-bottom: 8rem
 }
 
-#auth #auth-left .auth-logo img {
-    height: 30px
+#auth #auth-left .auth-logo-signup img {
+    height: 78px
 }
+
+#auth #auth-left .auth-logo-login img {
+    height: 78px
+}
+*/
 
 @media screen and (max-width:767px) {
-    #auth #auth-left {
-        padding: 5rem
+    .logo {
+        margin-top: 2.2rem
     }
 }
 
 @media screen and (max-width:576px) {
-    #auth #auth-left {
-        padding: 5rem 3rem
+    .logo {
+        margin-top: 2.2rem
     }
 }
 
@@ -57,3 +65,10 @@ body {
 /* body.theme-dark #auth-right {
     background: url(../../../assets/images/4853433.png?45649b87e0b3f50bfa1372c6cdb4595f), linear-gradient(90deg, #2d499d, #3f5491)
 } */
+
+.auth .auth-content {
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}

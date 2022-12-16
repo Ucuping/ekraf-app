@@ -21,7 +21,7 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input)
     {
         Validator::make($input, [
-            'company' => ['nullable'],
+            'identity_number' => ['required', 'string', 'max:255'],
             'name' => ['required', 'string', 'max:255'],
             'username' => [
                 'required',
@@ -36,15 +36,15 @@ class CreateNewUser implements CreatesNewUsers
                 'max:255',
                 Rule::unique(User::class),
             ],
-            'password' => $this->passwordRules(),
+            'password' => ['required'],
         ])->validate();
 
         return User::create([
-            'company_id' => $input['company'],
+            'identity_number' => $input['identity_number'],
             'username' => $input['username'],
             'name' => $input['name'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
-        ]);
+        ])->assignRole('Ekraf');
     }
 }

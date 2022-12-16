@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->string('name');
-            $table->string('owner_identification_number');
+            $table->string('owner_identification_number')->unique();
             $table->string('haki_number')->nullable();
             $table->string('owner_name');
             $table->text('address');
@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('instagram_username')->nullable();
             $table->string('twitter_username')->nullable();
             $table->enum('status', ['approved', 'rejected', 'pending'])->default('pending');
+            $table->text('message_rejected')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict')->onUpdate('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('restrict')->onUpdate('cascade');

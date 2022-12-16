@@ -10,7 +10,8 @@
 <script src="{{ asset('assets/extensions/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
 <script src="{{ asset('assets/extensions/@fortawesome/fontawesome-free/js/all.min.js') }}"></script>
-<script src="{{ asset('assets/extensions/apexcharts/apexcharts.min.js') }}"></script>
+{{-- <script src="{{ asset('assets/extensions/apexcharts/apexcharts.min.js') }}"></script> --}}
+<script src="{{ @asset('vendor/larapex-charts/apexcharts.js') }}"></script>
 <script src="{{ asset('assets/extensions/chart.js/chart.min.js') }}"></script>
 <script src="{{ asset('assets/extensions/choices.js/public/assets/scripts/choices.min.js') }}"></script>
 <script src="{{ asset('assets/js/datatables.min.js') }}"></script>
@@ -26,7 +27,8 @@
 <script src="{{ asset('assets/extensions/quill/quill.min.js') }}"></script>
 {{-- <script src="{{ asset('assets/extensions/rater-js/lib/rater-js.js') }}"></script> --}}
 <script src="{{ asset('assets/extensions/summernote/summernote.min.js') }}"></script>
-<script src="{{ asset('assets/extensions/sweetalert2/sweetalert2.min.js') }}"></script>
+<script src="{{ asset('assets/extensions/sweetalert2/sweetalert2.all.js') }}"></script>
+<script src="{{ asset('assets/extensions/sweetalert2/sweetalert2.js') }}"></script>
 <script src="{{ asset('assets/extensions/tinymce/jquery.tinymce.min.js') }}"></script>
 <script src="{{ asset('assets/extensions/tinymce/tinymce.min.js') }}"></script>
 <script src="{{ asset('assets/extensions/toastify-js/src/toastify.js') }}"></script>

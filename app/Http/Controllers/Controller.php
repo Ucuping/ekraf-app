@@ -36,7 +36,7 @@ class Controller extends BaseController
             } else {
                 return response()->json([
                     'status' => 'Error',
-                    'message' => $e->getMessage() || 'Unknown Error'
+                    'message' => $e->getMessage()
                 ], 500);
             }
         } else {

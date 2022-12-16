@@ -22,15 +22,15 @@ table = initTable('#dataTable', [
                 </div>
                 <div>
                     <strong>${data}</strong>
-                    <p class="mb-0 pb-0 text-muted small">${row.owner_name}</p>
+                    <p class="mb-0 pb-0 text-muted small">${row.category.name}</p>
                 </div>
             </div>
             `
         }
     },
     {
-        name: 'category.name',
-        data: 'category.name'
+        name: 'owner_name',
+        data: 'owner_name'
     },
     {
         name: 'address',
@@ -41,7 +41,7 @@ table = initTable('#dataTable', [
         data: 'status',
         mRender: (data, type, row, meta) => {
             // console.log(data)
-            return data == 'pending' ? 'Menunggu Verifikasi' : (data == 'approved' ? 'Terverifikasi' : 'Ditolak')
+            return data == 'pending' ? 'Menunggu Diverifikasi' : (data == 'approved' ? 'Terverifikasi' : 'Ditolak')
         }
     },
     {
@@ -55,9 +55,9 @@ table = initTable('#dataTable', [
             var render = ``
 
             if (userPermissions.includes('company-validations')) {
-                render += `<button class="btn btn-outline-success btn-sm" data-toggle="approved" data-id="${data}"><i class="fas fa-check"></i></button> `
                 render += `<button class="btn btn-outline-primary btn-sm" data-toggle="ajax" data-target="${window.location.href}/${data}/detail"><i class="fas fa-eye"></i></button> `
-                render += `<button class="btn btn-outline-danger btn-sm" data-toggle="delete" data-id="${data}"><i class="fas fa-times"></i></button> `
+                render += `<button class="btn btn-outline-success btn-sm" data-toggle="approved" data-id="${data}"><i class="fas fa-check"></i></button> `
+                render += `<button class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#myModal" data-toggle="rejected" data-id="${data}"><i class="fas fa-times"></i></button> `
             }
 
             // if (userPermissions.includes('company-validations')) {
@@ -71,12 +71,12 @@ table = initTable('#dataTable', [
         e.preventDefault()
 
         Swal.fire({
-            title: 'Konfirmasi?',
+            title: 'Verifikasi?',
             icon: 'question',
             text: 'Apakah anda yakin?',
             showCancelButton: true,
-            confirmButtonCollor: '#3085d6',
-            cancelButtonCollor: '#d33',
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
             confirmButtonText: 'Yes'
         }).then(async (result) => {
             if (result.isConfirmed) {
@@ -121,5 +121,10 @@ table = initTable('#dataTable', [
                 }
             }
         })
+    })
+
+    $('button[data-toggle="rejected"]').unbind().on('click', function (e) {
+        e.preventDefault()
+        $('#rejectedMessageForm').attr('action', `${window.location.href}/${$(this).data('id')}/rejected`)
     })
 })

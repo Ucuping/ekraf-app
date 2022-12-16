@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\Auth\AuthController;
+use App\Http\Controllers\Backend\Company\CompanyController;
 use App\Http\Controllers\Backend\CompanyValidation\CompanyValidationController;
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 use App\Http\Controllers\Backend\Role\RoleController;
@@ -52,7 +53,13 @@ Route::prefix('apps')->middleware('auth')->group(function () {
     // });
 
     Route::prefix('companies')->middleware('can:read-companies')->group(function () {
-        Route::get('', [])->name('apps.companies');
+        Route::get('', [CompanyController::class, 'index'])->name('apps.companies');
+        Route::get('getData', [CompanyController::class, 'getData'])->name('apps.companies.getData');
+        Route::get('create', [CompanyController::class, 'create'])->middleware('can:create-companies')->name('apps.companies.create');
+        Route::post('store', [CompanyController::class, 'store'])->middleware('can:create-companies')->name('apps.companies.store');
+        Route::get('{company}/edit', [CompanyController::class, 'edit'])->middleware('can:update-companies')->name('apps.companies.edit');
+        Route::post('{company}/update', [CompanyController::class, 'update'])->middleware('can:update-companies')->name('apps.companies.update');
+        Route::get('{company}/detail', [CompanyController::class, 'detail'])->name('apps.companies.detail');
     });
 
     Route::prefix('validations')->middleware('can:company-validations')->group(function () {
@@ -60,6 +67,8 @@ Route::prefix('apps')->middleware('auth')->group(function () {
         Route::get('getData', [CompanyValidationController::class, 'getData'])->name('apps.validations.getData');
         Route::get('{company}/detail', [CompanyValidationController::class, 'detail'])->name('apps.validations.detail');
         Route::post('{company}/approved', [CompanyValidationController::class, 'approved'])->name('apps.validations.approved');
+        Route::post('{company}/rejected', [CompanyValidationController::class, 'rejected'])->name('apps.validations.rejected');
+        Route::get('{company}/print', [CompanyValidationController::class, 'print'])->name('apps.validations.print');
     });
 });
 

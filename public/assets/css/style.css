@@ -224,3 +224,52 @@ ul.nav-detail li:hover, ul.nav-detail li.active {
     color: #296bbd;
     transition: .3s ease-in-out;
 } */
+
+#dashboard-company {
+    /* height: 100vh; */
+    overflow-x: hidden
+}
+
+/* #dashboard-company #dashboard-company-right {
+    background: url(../../../assets/images/4853433.png?45649b87e0b3f50bfa1372c6cdb4595f), linear-gradient(90deg, #2d499d, #3f5491);
+    height: 100%
+} */
+/* #dashboard-company #dashboard-company-right {
+    background: url(../../../assets/images/login.svg);
+    height: 100%
+} */
+
+#dashboard-company #dashboard-company-left {
+    padding: 5rem 8rem
+}
+
+#dashboard-company #dashboard-company-left .dashboard-company-title {
+    font-size: 20px;
+    margin-bottom: 1rem
+}
+
+#dashboard-company #dashboard-company-left .dashboard-company-subtitle {
+    color: #a8aebb;
+    font-size: 16px;
+    line-height: 2rem
+}
+
+/* #dashboard-company #dashboard-company-left .dashboard-company-logo {
+    margin-bottom: 7rem
+} */
+
+/* #dashboard-company #dashboard-company-left .dashboard-company-logo img {
+    height: 30px
+} */
+
+@media screen and (max-width:767px) {
+    #dashboard-company #dashboard-company-left {
+        padding: 5rem
+    }
+}
+
+@media screen and (max-width:576px) {
+    #dashboard-company #dashboard-company-left {
+        padding: 5rem 3rem
+    }
+}

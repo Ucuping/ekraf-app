@@ -2,16 +2,18 @@
     <div class="intro-y">
         <div class="page-title mb-3">
             <div class="row">
-              <div class="col-12 col-md-6 order-md-1 order-last">
-                <h4 class="mb-sm-0">{{ $title ?? 'Untitled Page' }}</h4>
-              </div>
-              <div class="col-12 col-md-6 order-md-2 order-first">
-                <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
-                  @yield('breadcrumb')
-                </nav>
-              </div>
+                <div class="col-12 col-md-6 order-md-1 order-last">
+                    <h4 class="mb-sm-0">{{ $title ?? 'Untitled Page' }}</h4>
+                </div>
+                @if (getInfoLogin()->roles[0]->name != 'Ekraf')
+                    <div class="col-12 col-md-6 order-md-2 order-first">
+                        <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                        @yield('breadcrumb')
+                        </nav>
+                    </div>
+                @endif
+                </div>
             </div>
-        </div>
         <section class="section">
             @yield('content')
         </section>
@@ -19,7 +21,7 @@
 </div>
 
 <script>
-    document.title = "{{ $title . ' | SIM EKRAF KAB. JEMBER' }}"
+    document.title = "{{ $title . ' | SISTEM PROMOSI EKONOMI KREATIF KAB. JEMBER' }}"
     
     if (!window.jQuery) {
         document.body.innerHTML = ""

@@ -13,4 +13,9 @@ class Category extends Model
 
     protected $guarded = [];
     protected $appends = ['hashid'];
+
+    public function company()
+    {
+        return $this->hasMany(Company::class);
+    }
 }

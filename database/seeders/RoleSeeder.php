@@ -43,6 +43,7 @@ class RoleSeeder extends Seeder
         ]);
 
         $admin->givePermissionTo([
+            'read-dashboard',
             'read-categories',
             'company-validations'
         ]);

@@ -8,11 +8,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="asset-url" content="{{ asset('/') }}">
     <meta name="user-permissions" content="{{ getUserPermissions() }}">
-    <title>{{ $title }} | SIM EKRAF KAB. JEMBER</title>
+    <title>{{ $title }} | SISTEM PROMOSI EKONOMI KREATIF KAB. JEMBER</title>
 
     <link
     rel="shortcut icon"
-    href="{{ asset('assets/images/logo/favicon.svg') }}"
+    href="{{ asset('assets/images/logo/favicon.png') }}"
     type="image/x-icon"
     />
     <link
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="{{ asset('assets/extensions/filepond/filepond.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/summernote/summernote.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/extensions/sweetalert2/sweetalert2.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/extensions/sweetalert2/sweetalert2.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/toastify-js/src/toastify.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/extensions/waitme/waitMe.css') }}" />
     

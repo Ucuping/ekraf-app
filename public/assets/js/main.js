@@ -6,14 +6,15 @@ $(function () {
         window.userPermissions = $('meta[name="user-permissions"]').attr('content').split(',')
     }
     window.onpopstate = () => {
-        // $('.modal').modal('hide')
-        // $('.modal-backdrop').remove()
-        // $('')
+        if ($('.modal').length) {
+            $('.modal').modal('hide')
+            $('.modal-backdrop').remove()
+            $('body').removeClass('.modal-open')
+        }
         handleView()
     }
     if ($('v-content-rendering').length) {
         handleView()
-        
     } else {
         handleEvent()
     }
@@ -52,12 +53,14 @@ const handleView = async (url = null) => {
             handleEvent()
         }
 
-        FilePond.registerPlugin(FilePondPluginImagePreview)
-        $.each($('.filepond'), (key, el) => {
-            FilePond.create(el, {
-                storeAsFile: true
+        if ($('.filepond').length) {
+            FilePond.registerPlugin(FilePondPluginImagePreview)
+            $.each($('.filepond'), (key, el) => {
+                FilePond.create(el, {
+                    storeAsFile: true
+                })
             })
-        })
+        }
 
         if ($('.js-choices').length) {
             $.each($('.js-choices'), (key, val) => {
@@ -73,7 +76,7 @@ const handleView = async (url = null) => {
         horizontalLayout()
         handleEvent()
     } else {
-        handleError(res.status)
+        // handleError(res.status)
     }
 
     hideLoader()
@@ -94,7 +97,14 @@ const hideLoader = () => {
 const handleEvent = () => {
     $('a[data-toggle="ajax"]').unbind().on('click', function (e) {
         e.preventDefault()
-        pushState($(this).attr('href'))
+        // pushState($(this).attr('href'))
+        if ($(this).attr('href').charAt(0) != '#' && typeof $(this).data('bs-toggle') == 'undefined') {
+            if ($(this).attr('target') == '_blank') {
+                window.open($(this).attr('href'), '_blank')
+            } else {
+                pushState($(this).attr('href'))
+            }
+        }
     })
 
     $('button[data-toggle="ajax"]').unbind().on('click', function (e) {
@@ -187,9 +197,11 @@ const handleEvent = () => {
             const data = await res.json()
             toastify(data.message, 'success')
 
-            // $('.modal').modal('hide')
-            // $('.modal-backdrop').remove()
-            // $('.modal-open').removeClass('modal-open')
+            if ($('.modal').length) {
+                $('.modal').modal('hide')
+                $('.modal-backdrop').remove()
+                $('body').removeClass('.modal-open')
+            }
 
             if ($(this).data('redirect')) {
                 if (typeof $(this).data('callback') != 'undefined') {
@@ -245,6 +257,9 @@ const showInvalid = (errorMessages) => {
                 <div class="small text-danger py-1 choices-invalid">${errorMessages[errorField]}</div>
             `)
             $(`.form-control[name="${errorField}"]`).parent().addClass('border-danger')
+        } else if ($(`*[name="${errorField}"]`).parent().parent().hasClass('filepond--root')) {
+            $(`*[name="${errorField}"]`).parent().parent().parent().append(`<div class="small text-danger py-1">${errorMessages[errorField]}</div>`);
+            $(`*[name="${errorField}"]`).parent().parent().addClass('border-danger');
         } else {
             $(
                 `<div class="invalid-feedback">${errorMessages[errorField]}</div>`
@@ -258,13 +273,14 @@ const resetInvalid = () => {
     for (const el of $('.form-control')) {
         $(el).removeClass('is-invalid')
         $('.choices__inner').removeClass('border-danger')
+        $('.filepond--root').removeClass("border-danger")
         $(el).siblings('.invalid-feedback').remove()
         $('.invalid-feedback').remove()
         $('.choices-invalid').remove()
     }
 }
 
-const initTable = (el, columns = [], drawCallback = null) => {
+const initTable = (el, columns = [], drawCallback = () => {}) => {
     if (!$.fn.DataTable.isDataTable(el)) {
 
     }
@@ -296,10 +312,12 @@ const initTable = (el, columns = [], drawCallback = null) => {
 
     table.on('draw.dt', function () {
         handleEvent()
+        drawCallback()
     })
-
+    
     table.on('responsive-display', function () {
         handleEvent()
+        drawCallback()
     })
 
     $(el + ' th').addClass('bg-light')

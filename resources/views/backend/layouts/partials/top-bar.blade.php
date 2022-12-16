@@ -3,7 +3,7 @@
       <div class="container">
         <div class="logo">
           <a href="javascript:void(0)"
-            ><img src="{{ asset('assets/images/logo/logo.svg') }}" alt="Logo"
+            ><img src="{{ asset('assets/images/logo/logo.png') }}" alt="Logo"
           /></a>
         </div>
         <div class="header-top-right">
@@ -29,9 +29,6 @@
               class="dropdown-menu dropdown-menu-end shadow-lg"
               aria-labelledby="topbarUserDropdown"
             >
-              <li><a class="dropdown-item" href="#">My Account</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
-              <li><hr class="dropdown-divider" /></li>
               <li>
                 <a class="dropdown-item" href="{{ url('/logout') }}" data-toggle="logout"
                 data-token="{{ csrf_token() }}" data-title="Logout?" data-text="Yakin ingin keluar?"

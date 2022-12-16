@@ -11,7 +11,7 @@ class AuthController extends Controller
     {
         // return dd(auth()->user());
         $data = [
-            'title' => 'Login'
+            'title' => 'Masuk'
         ];
         return view('backend.auth.index', $data);
     }
@@ -19,5 +19,14 @@ class AuthController extends Controller
     public function check()
     {
         return customView('layouts.content-wrapper', [], 'backend');
+    }
+
+    public function register()
+    {
+        $data = [
+            'title' => 'Daftar'
+        ];
+
+        return view('backend.auth.register', $data);
     }
 }

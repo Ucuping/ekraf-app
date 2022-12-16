@@ -14,11 +14,11 @@
         <div class="container">
           <div class="footer clearfix mb-0 text-muted">
             <div class="float-start">
-              <p>{{ date('Y') }} &copy; DINAS EKONOMI KREATIF KAB. JEMBER</p>
+              <p>{{ date('Y') }} &copy; DINAS PARIWISATA DAN KEBUDAYAAN KAB. JEMBER</p>
             </div>
             <div class="float-end">
               <p>
-                Crafted with
+                CRAFTED WITH
                 <span class="text-danger"><i class="bi bi-heart"></i></span>
                 by <a href="https://seal.or.id">BWI-JBR 2 KELOMPOK B</a>
               </p>

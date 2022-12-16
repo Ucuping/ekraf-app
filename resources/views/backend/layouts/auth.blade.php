@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ $title }} | SIM EKRAF KAB. JEMBER</title>
+    <title>{{ $title }} | SISTEM PROMOSI EKONOMI KREATIF KAB. JEMBER</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="base-url" content="{{ url('/') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="asset-url" content="{{ asset('/') }}">
-    <meta name="user-permissions" content="{{ getUserPermissions() }}">
+    {{-- <meta name="user-permissions" content="{{ getUserPermissions() }}"> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/main/app.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/pages/auth.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
     <link
       rel="shortcut icon"
-      href="{{ asset('assets/images/logo/favicon.svg') }}"
+      href="{{ asset('assets/images/logo/favicon.png') }}"
       type="image/x-icon"
     />
     <link
@@ -33,7 +34,7 @@
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script>
-      document.title = "{{ $title . ' | DINAS EKONOMI KREATIF KAB. JEMBER' }}"
+      document.title = "{{ $title . ' | SISTEM PROMOSI EKONOMI KREATIF KAB. JEMBER' }}"
   
       if (!window.jQuery) {
           document.body.innerHTML = ""

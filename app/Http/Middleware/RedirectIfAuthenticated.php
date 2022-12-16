@@ -23,11 +23,12 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                if (Auth::guard($guard)->user()->roles[0]->name == 'Developer' || Auth::guard($guard)->user()->roles[0]->name == 'Admin') {
-                    return redirect(RouteServiceProvider::HOME);
-                } else {
-                    return redirect()->route('apps.companies');
-                }
+                // if (Auth::guard($guard)->user()->roles[0]->name == 'Developer' || Auth::guard($guard)->user()->roles[0]->name == 'Admin') {
+                //     return redirect(RouteServiceProvider::HOME);
+                // } else {
+                //     return redirect()->route('apps.dashboard');
+                // }
+                return redirect(RouteServiceProvider::HOME);
             }
         }
 

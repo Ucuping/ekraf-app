@@ -22,8 +22,8 @@
                 <table class="table zero-configuration" data-url="{{ route('apps.validations.getData') }}" width="100%" id="dataTable">
                     <thead>
                         <th>No.</th>
-                        <th>Nama Ekraf</th>
-                        <th>Kategori</th>
+                        <th>Nama</th>
+                        <th>Pemilik</th>
                         <th>Alamat</th>
                         <th>Status</th>
                         <th></th>
@@ -32,4 +32,5 @@
             </div>
         </div>
     </div>
+    @include('backend.validation.partials.form')
 @endsection

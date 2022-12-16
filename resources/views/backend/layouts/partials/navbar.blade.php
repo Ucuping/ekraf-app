@@ -8,24 +8,24 @@
           </a>
         </li>
         @endcan
-        @can('read-categories')
+        {{-- @can('read-categories')
         <li class="menu-item">
           <a href="{{ route('apps.dashboard') }}" data-toggle="ajax" class="menu-link">
-            <span><i class="fas fa-list"></i> Kategori Ekraf</span>
+            <span><i class="fas fa-list-alt"></i> Kategori</span>
           </a>
         </li>
-        @endcan
+        @endcan --}}
         @can('read-companies')
         <li class="menu-item">
-          <a href="{{ route('apps.dashboard') }}" data-toggle="ajax" class="menu-link">
-            <span><i class="fas fa-store"></i> Ekraf Milikmu</span>
+          <a href="{{ route('apps.companies') }}" data-toggle="ajax" class="menu-link">
+            <span><i class="fas fa-store-alt"></i> Ekraf</span>
           </a>
         </li>
         @endcan
         @can('company-validations')
         <li class="menu-item">
           <a href="{{ route('apps.validations') }}" data-toggle="ajax" class="menu-link">
-            <span><i class="fas fa-check-square"></i> Validasi Ekraf</span>
+            <span><i class="fas fa-check-square"></i> Validasi</span>
           </a>
         </li>
         @endcan
