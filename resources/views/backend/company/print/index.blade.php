@@ -106,7 +106,8 @@
             <tbody>
                 <tr>
                     <td style="padding-top: 90px;">
-                        Harry Agustriono, ATD., MT
+                        Harry Agustriono, ATD., MT <br />
+                        NIP.196908111992031005
                     </td>
                     <td style="padding-top: 90px;">
                         Dhebora Krisnowati, S, S.Pd, M.Pd <br/>

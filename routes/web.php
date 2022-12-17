@@ -29,7 +29,10 @@ Route::get('/auth/check', [AuthController::class, 'check'])->name('auth.check');
 Route::get('/auth/register', [AuthController::class, 'register'])->middleware('guest')->name('auth.register');
 
 Route::prefix('apps')->middleware('auth')->group(function () {
-    Route::get('dashboard', [DashboardController::class, 'index'])->middleware('can:read-dashboard')->name('apps.dashboard');
+    Route::prefix('dashboard')->middleware('can:read-dashboard')->group(function () {
+        Route::get('', [DashboardController::class, 'index'])->name('apps.dashboard');
+        Route::get('get-graphic-data', [DashboardController::class, 'getGraphicData'])->name('apps.dashboard.get-graphic-data');
+    });
 
     // Route::prefix('users')->middleware('can:read-users')->group(function () {
     //     Route::get('', [UserController::class, 'index'])->name('apps.users');
