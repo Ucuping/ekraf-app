@@ -1,22 +1,20 @@
 <?php
- 
-namespace App\Http\Controllers\frontend\Category;
- 
-use App\Models\Company;
-use Illuminate\Http\Request;
+
+namespace App\Http\Controllers\Frontend\Category;
+
 use App\Http\Controllers\Controller;
- 
+use App\Models\Category;
+use Illuminate\Http\Request;
+
 class CategoryController extends Controller
 {
-    // /**
-    //  * Show the profile for a given user.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\View\View
-    //  */
-    public function detail()
+    public function detail(Category $category)
     {
-        $data = Company::all();
-        return view('frontend.detailcategory', compact('data'));
+        $data = [
+            'title' => 'Detail Sub Kategori',
+            'data' => $category
+        ];
+
+        return view('frontend.category.detail', $data);
     }
 }
