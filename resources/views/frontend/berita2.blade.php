@@ -1,0 +1,21 @@
+@extends('frontend.kategori')
+@section('title' , 'Berita')
+
+<div id="berita" class="container">
+    <div class="col-6 col-sm-3 col-lg-6 mx-auto">
+        <img class="shadow" src="assets1/img/berita2.jpeg" alt="">
+        <h4 class="text-center fw-bold">Pengembangan Ekonomi Kreatif Kota Jember melalui Event JFC</h4>
+    </div>
+    <div class="detail-berita col-10 col-sm-6 col-lg-10 mx-auto">
+        <p>Ekonomi Kreatif adalah sebuah konsep pada era ekonomi baru yang mengintensifkan informasi dan kreativitas dengan mengandalkan ide dan pengetahuan dari sumber daya manusia sebagai faktor produksi yang utama. Konsep ini biasanya akan didukung dengan keberadaan industri kreatif yang menjadi perwujudannya. Seiring berjalannya waktu, perkembangan ekonomi sampai pada taraf ekonomi kreatif setelah beberapa waktu sebelumnya, dunia dihadapi dengan konsep ekonomi informasi yang mana informasi menjadi hal yang utama dalam pengembangan ekonomi. Tercatat beberapa hal yang menjadi karakteristik dari ekonomi kreatif yaitu diperlukan kolaborasi antara berbagai aktor yang berperan dalam indusri kreatif, yaitu cendekiawan (kaum intelektual), dunia usaha, dan pemerintah yang merupakan prasyarat mendasar, berbasis pada ide atau gagasan, pengembangan tidak terbatas dalam berbagai bidang usaha, serta konsep yang dibangun bersifat relatif.<br><br>
+
+            Di Indonesia sendiri, perkembangan ekonomi kreatif dimulai pada tahun 2006 dimana Presiden Susilo Bambang Yudhoyono mengintruksikan untuk mengembangkan ekonomi kreatif. Proses pengembangan ini diwujudkan pertama kali dengan pembentukan Indonesian Design Power oleh Departemen Perdagangan untuk membantu pengembangan ekonomi kreatif di Indonesia.<br><br>
+            
+            Tujuan dari pengembangan ekonomi kreatif sendiri yakni guna mengurangi angka pengangguran. Sebab konsep ini ramah lingkungan dan sangat menjanjikan untuk jangka panjang. Perkembangan ekonomi kreatif di Indonesia sudah menunjukkan peningkatan yang cukup baik walaupun potensi ini masih terbuka luas untuk lebih dikembangkan lagi, mengingat Indonesia memiliki sumber daya manusia yang cukup teruji di dunia Internasional. Untuk itu, pemetaan potensi Usaha Kecil dan Menengah (UKM) bidang ekonomi kreatif di Kabupaten Jember harus segera dilaksanakan, karena Kabupaten Jember memiliki keunggulan di bidang ekonomi dan budaya yang beraneka ragam.<br><br>
+            
+            Kabupaten Jember memiliki 15 sektor ekonomi kreatif yaitu Periklanan, Arsitektur, Pasar Barang Seni, Kuliner, Kerajinan, Desain, Fashion, Video, Film dan Fotografi, Permainan Interaktif, Musik, Seni Pertunjukan, Penerbitan dan Percetakan, Layanan Komputer dan Piranti Lunak, Televisi dan Radio, serta Riset dan Pengembangan.
+            Ekonomi Kreatif adalah sebuah konsep pada era ekonomi baru yang mengintensifkan informasi dan kreativitas dengan mengandalkan ide dan pengetahuan dari sumber daya manusia sebagai faktor produksi yang utama. Konsep ini biasanya akan didukung dengan keberadaan industri kreatif yang menjadi perwujudannya. Seiring berjalannya waktu, perkembangan ekonomi sampai pada taraf ekonomi kreatif setelah beberapa waktu sebelumnya, dunia dihadapi dengan konsep ekonomi informasi yang mana informasi menjadi hal yang utama dalam pengembangan ekonomi. Tercatat beberapa hal yang menjadi karakteristik dari ekonomi kreatif yaitu diperlukan kolaborasi antara berbagai aktor yang berperan dalam indusri kreatif, yaitu cendekiawan (kaum intelektual), dunia usaha, dan pemerintah yang merupakan prasyarat mendasar, berbasis pada ide atau gagasan, pengembangan tidak terbatas dalam berbagai bidang usaha, serta konsep yang dibangun bersifat relatif.<br><br>
+            
+            Di Indonesia sendiri, perkembangan ekonomi kreatif dimulai pada tahun 2006 dimana Presiden Susilo Bambang Yudhoyono mengintruksikan untuk mengembangkan ekonomi kreatif. Proses pengembangan ini diwujudkan pertama kali dengan pembentukan Indonesian Design Power oleh Departemen Perdagangan untuk membantu pengembangan ekonomi kreatif di Indonesia.</p>
+    </div>
+</div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Beranda Ekraf Jember</title>
+    <title>Beranda Prokraf Jember</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -48,7 +48,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center">
-        <h1 class="logo me-auto"><a href="index.html">E-KRAF JEMBER</a></h1>
+        <h1 class="logo me-auto"><a href="index.html">PROKRAF JEMBER</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo me-auto"><img src="assets1/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -115,9 +115,9 @@
                 <div class="slider-content">
                     <div class="col-md-12 text-center">
                         <h1 class="animated3">
-                            <span><strong>Selamat Datang</strong> di E-Kraf Jember</span>
+                            <span><strong>Selamat Datang</strong> di Prokraf Jember</span>
                         </h1>
-                        <p class="animated2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> cum quis temporibus, alias at nobis non?</p>	
+                        <p class="animated2">Pengembangan sistem informasi pemasaran ekonomi kreatif menuju <br> smart goverment untuk mengoptimalkan fleksibilitas <br> kreatifitas dan produktivitas</p>	
                         <a href="#subsector" class="page-scroll btn animated1">Selengkapnya</a>
                     </div>
                 </div>
@@ -129,9 +129,9 @@
                 <div class="slider-content">
                     <div class="col-md-12 text-center">
                         <h1 class="animated2">
-                            <span>Daftarkan E-Kraf mu <strong>Sekarang</strong></span>
+                            <span>Daftarkan Prokraf mu <strong>Sekarang</strong></span>
                         </h1>
-                        <p class="animated1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> cum quis temporibus, alias at nobis non?</p>	
+                        <p class="animated1">Daftarkan dan promosikan usaha ekonomi kreatifmu  secara resmi <br> di Dinas Pariwisata dan Kebudayaan Kabupaten Jember</p>	
                     </div>
                 </div>
             </div>
@@ -207,7 +207,7 @@
                             <i class="fa fa-briefcase"></i>
                             <div class="feature-content">
                                 <h4>Startup</h4>
-                                <p>Lorem ipsum dolor. reprehenderit</p>
+                                <p> Startup adalah sebuah usaha yang baru berjalan dan...</p>
                                 <a href="/startup" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                             <i class="fa-solid fa-compass-drafting"></i>
                             <div class="feature-content">
                                 <h4>Arsitektur</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Kegiatan kreatif yang berhubungan dengan jasa...</p>
                                 <a href="/arsitektur" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -227,7 +227,7 @@
                             <i class="fa fa-house"></i>
                             <div class="feature-content">
                                 <h4>Desain Interior</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Masyarakat mulai mengapresiasi estetika ruangan...</p>
                                 <a href="/interior" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -237,7 +237,7 @@
                             <i class="fa fa-music"></i>
                             <div class="feature-content">
                                 <h4>Musik</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Kegiatan kreatif yang berhubungan dengan...</p>
                                 <a href="/musik" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -247,7 +247,7 @@
                             <i class="fa fa-chess"></i>
                             <div class="feature-content">
                                 <h4>Seni Rupa</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Bidang seni rupa dalam ekonomi kreatif...</p>
                                 <a href="/seni" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                             <i class="fa-solid fa-cubes"></i>
                             <div class="feature-content">
                                 <h4>Desain Produk</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Desain produk merupakan proses kreasi sebuah...</p>
                                 <a href="/produk" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -269,7 +269,7 @@
                             <i class="fa fa-glasses"></i>
                             <div class="feature-content">
                                 <h4>Fashion</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Dalam dunia fashion, tren pakaian selalu...</p>
                                 <a href="/fashion" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -279,7 +279,7 @@
                             <i class="fa-solid fa-utensils"></i>
                             <div class="feature-content">
                                 <h4>Kuliner</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Kuliner adalah istilah yang sering kali...</p>
                                 <a href="/kuliner" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -289,7 +289,7 @@
                             <i class="fa-solid fa-film"></i>
                             <div class="feature-content">
                                 <h4>Film</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Film adalah salah satu industri kreatif berupa...</p>
                                 <a href="/film" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -299,7 +299,7 @@
                             <i class="fa-solid fa-video"></i>
                             <div class="feature-content">
                                 <h4>Animasi & Video</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Kegiatan kreatif yang berkaitan dengan kreasi...</p>
                                 <a href="/animasi" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -309,7 +309,7 @@
                             <i class="fa-solid fa-camera"></i>
                             <div class="feature-content">
                                 <h4>Fotografi</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Fotografi di dalam pengembangan ekonomi kreatif...</p>
                                 <a href="/fotografi" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -319,7 +319,7 @@
                             <i class="fa-solid fa-palette"></i>
                             <div class="feature-content">
                                 <h4>Komunikasi Visual</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Desain Komunikasi Visual (DKV)  sangat penting...</p>
                                 <a href="/komunikasi" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -331,7 +331,7 @@
                             <i class="fa-solid fa-radio"></i>
                             <div class="feature-content">
                                 <h4>Televisi dan Radio</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Kegiatan kreatif yang berhubungan dengan...</p>
                                 <a href="/televisi" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -341,7 +341,7 @@
                             <i class="fa-sharp fa-solid fa-paper-plane"></i>
                             <div class="feature-content">
                                 <h4>Kriya</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Kriya didefinisikan sebagai produk yang...</p>
                                 <a href="/kriya" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -351,7 +351,7 @@
                             <i class="fa-solid fa-bullhorn"></i>
                             <div class="feature-content">
                                 <h4>Periklanan</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Kegiatan kreatif yang berhubungan dengan...</p>
                                 <a href="/periklanan" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -361,7 +361,7 @@
                             <i class="fa-solid fa-masks-theater"></i>
                             <div class="feature-content">
                                 <h4>Seni Pertunjukan</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Kegiatan kreatif yang berhubungan dengan usaha...</p>
                                 <a href="/pertunjukan" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -371,7 +371,7 @@
                             <i class="fa-solid fa-gamepad"></i>
                             <div class="feature-content">
                                 <h4>Aplikasi dan Game</h4>
-                                <p>Duis aute irure dolor in reprehenderit</p>
+                                <p>Bidang layanan komputer dan perangkat lunak...</p>
                                 <a href="/aplikasi" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
@@ -410,7 +410,7 @@
                   <div class="post-details mt-2 mb-4">
                     <span class="date"><strong>20 Sep 2022 </strong></span>
                   </div>
-                  <h3><a href="course-details.html">Pengembangan Ekonomi Kreatif Kota Jember melalui Event JFC </a></h3>
+                  <h3><a href="/berita2">Pengembangan Ekonomi Kreatif Kota Jember melalui Event JFC </a></h3>
                   
                     <p>Ekonomi Kreatif adalah sebuah konsep pada era ekonomi baru yang mengintensifkan informasi dan kreativitas dengan mengandalkan ide dan pengetahuan dari sumber daya manusia sebagai faktor produksi yang utama. Konsep ini biasanya akan didukung dengan keberadaan industri...</p>
                 </div>
@@ -424,7 +424,7 @@
                   <div class="post-details mt-2 mb-4">
                     <span class="date"><strong>08 Okt 2022 </strong></span>
                   </div>
-                  <h3><a href="course-details.html">Ragam Ekonomi Kreatif di Kabupaten Jember</a></h3>
+                  <h3><a href="/berita3">Ragam Ekonomi Kreatif di Kabupaten Jember</a></h3>
                     <p>Kabupaten Jember merupakan pusat regional di kawasan timur tapal kuda jantan. Kabupaten Jember juga mengembangkan batik yang dijadikan sebagai salah satu identitas dari daerah tersebut. Walaupun batik Jember masih belum memiliki brand yang luas namun batik ini...</p>
                 </div>
               </div>
@@ -437,7 +437,7 @@
                   <div class="post-details mt-2 mb-4">
                     <span class="date"><strong>03 Mar 2022 </strong></span>
                   </div>
-                  <h3><a href="course-details.html">Bangkitkan Ekonomi Kreatif, DEKRANASDA Jember Ikuti Pameran Di Surabaya</a></h3>
+                  <h3><a href="/berita4">Bangkitkan Ekonomi Kreatif, DEKRANASDA Jember Ikuti Pameran Di Surabaya</a></h3>
                     <p>Upaya membangkitkan ekonomi kreatif terus digencarkan berbagai pihak, salah satunya Dewan Kerajinan Nasional Daerah (Dekranasda) Jawa Timur. Mereka menggelar pameran...</p>
                 </div>
               </div>
@@ -450,7 +450,7 @@
                   <div class="post-details mt-2 mb-4">
                     <span class="date"><strong>14 Sep 2022</strong></span>
                   </div>
-                  <h3><a href="course-details.html">Dorong Pemulihan Ekonomi Kabupaten Jember melalui Diseminasi Kekayaan Intelektual</a></h3>
+                  <h3><a href="/berita5">Dorong Pemulihan Ekonomi Kabupaten Jember melalui Diseminasi Kekayaan Intelektual</a></h3>
                     <p>Demi menggali potensi Usaha Mikro Kecil dan Menengah (UMKM), Direktorat Jenderal Kekayaan Intelektual (DJKI) Kementerian Hukum dan Hak Asasi Manusia (Kemenkumham) menggelar Diseminasi...</p>
                 </div>
               </div>

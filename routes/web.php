@@ -82,6 +82,18 @@ Route::get('/aplikasi', function () {
 Route::get('/berita1', function () {
     return view('frontend.berita1');
 });
+Route::get('/berita2', function () {
+    return view('frontend.berita2');
+});
+Route::get('/berita3', function () {
+    return view('frontend.berita3');
+});
+Route::get('/berita4', function () {
+    return view('frontend.berita4');
+});
+Route::get('/berita5', function () {
+    return view('frontend.berita5');
+});
 
 
 Route::get('/category', [CategoryController::class, 'detail'])->name('category');

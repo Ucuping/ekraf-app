@@ -610,11 +610,13 @@ position: relative;
 .carousel .carousel-item.active .animated1 {
 -webkit-animation: lightSpeedIn 1s ease-in 800ms both;
 animation: lightSpeedIn 1s ease-in 800ms both;
+text-transform: capitalize;
 }
 
 .carousel .carousel-item.active .animated2 {
 -webkit-animation: bounceIn 1s ease-in 800ms both;
 animation: bounceIn 1s ease-in 800ms both;
+text-transform: capitalize;
 }
 
 .carousel .carousel-item.active .animated3 {

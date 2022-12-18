@@ -14,4 +14,3 @@
          Melihat potensi diatas, program KKN kolaboratif Perguruan Tinggi Se-Kabupaten Jember  oleh kelompok 23 yang ditempatkan di Desa Jambearum akan membantu mengembangkan sumber daya tembakau menjadi UMKM kreatif dan berinovasi.</p>
     </div>
 </div>
-@endsection
