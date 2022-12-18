@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
         $ekraf = User::create([
             'identity_number' => '12345678',
             'name' => 'Demo Ekraf',
-            'username' => 'ekraf',
+            'username' => 'demo',
             'email' => 'ekraf@ekraf.com',
             'password' => Hash::make('1234'),
             'is_active' => true,
