@@ -18,4 +18,9 @@ class Category extends Model
     {
         return $this->hasMany(Company::class);
     }
+
+    public function provision()
+    {
+        return $this->hasMany(Provision::class);
+    }
 }

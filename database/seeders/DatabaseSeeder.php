@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             CompanySeeder::class,
             AnnouncementSeeder::class,
-            AttachmentSeeder::class
+            AttachmentSeeder::class,
+            ProvisionSeeder::class
         ]);
     }
 }

@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\Role\RoleController;
 use App\Http\Controllers\Backend\User\UserController;
 use App\Http\Controllers\Frontend\Home\HomeController;
 use App\Http\Controllers\Frontend\Category\CategoryController;
+use App\Http\Controllers\Frontend\Company\CompanyController as CompanyCompanyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -95,8 +96,14 @@ Route::get('/berita5', function () {
     return view('frontend.berita5');
 });
 
+Route::prefix('categories')->group(function () {
+    Route::get('', [CategoryController::class, 'index'])->name('categories');
+    Route::get('{category}/detail', [CategoryController::class, 'detail'])->name('categories.detail');
+});
 
-Route::get('/categories/{category}/detail', [CategoryController::class, 'detail'])->name('categories.detail');
+Route::prefix('companies')->group(function () {
+    Route::get('{company}/detail', [CompanyCompanyController::class, 'detail'])->name('companies.detail');
+});
 
 Route::get('/auth', [AuthController::class, 'index'])->name('auth')->middleware('guest');
 Route::get('/auth/check', [AuthController::class, 'check'])->name('auth.check');

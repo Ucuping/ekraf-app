@@ -48,108 +48,21 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center">
-        <h1 class="logo me-auto"><a href="index.html">PROKRAF JEMBER</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="logo me-auto"><a href="{{ route('home') }}">PROKRAF JEMBER</a></h1>
         <!-- <a href="index.html" class="logo me-auto"><img src="assets1/img/logo.png" alt="" class="img-fluid"></a>-->
 
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
             <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="#subsector">Sub Sektor</a></li>
-            {{-- <li><a href="#popular-courses">Berita</a></li> --}}
+            <li><a href="{{ route('categories') }}">Sub Sektor</a></li>
             <li><a href="{{ route('auth.register') }}">Daftar</a></li>
             <li><a href="{{ route('auth') }}">Masuk</a></li>
-            <!-- <li><a href="events.html">Events</a></li>
-          <li><a href="pricing.html">Pricing</a></li> -->
-
-            <!-- <li class="dropdown">
-              <a href="#"
-                ><span>Webinar</span> <i class="bi bi-chevron-down"></i
-              ></a>
-              <ul>
-                <li><a href="#">Akan Datang</a></li>
-                <li class="dropdown">
-                  <a href="#"
-                    ><span>Deep Drop Down</span>
-                    <i class="bi bi-chevron-right"></i
-                  ></a>
-                  <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Sudah Lewat</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul> -->
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-        <!-- .navbar -->
-
-        <!-- <a href="courses.html" class="get-started-btn">Get Started</a> -->
       </div>
     </header>
     <!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="page-top">
-      <div id="main-slide" class="carousel slide" data-ride="carousel">
-
-        <!-- Indicators -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#main-slide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#main-slide" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        </div>
-        <!--/ Indicators end-->
-
-        <!-- Carousel inner -->
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <img class="img-responsive" src="{{ asset('assets1/img/Jfc3.png') }}" alt="slider">
-                <div class="slider-content">
-                    <div class="col-md-12 text-center">
-                        <h1 class="animated3">
-                            <span><strong>Selamat Datang</strong> di Prokraf Jember</span>
-                        </h1>
-                        <p class="animated2">Pengembangan sistem informasi pemasaran ekonomi kreatif menuju <br> smart goverment untuk mengoptimalkan fleksibilitas <br> kreatifitas dan produktivitas</p>	
-                        <a href="#subsector" class="page-scroll btn animated1">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-            <!--/ Carousel item end -->
-            
-            <div class="carousel-item">
-                <img class="img-responsive" src="{{ asset('assets1/img/jff.jfif') }}" alt="slider">
-                <div class="slider-content">
-                    <div class="col-md-12 text-center">
-                        <h1 class="animated2">
-                            <span>Daftarkan Prokraf mu <strong>Sekarang</strong></span>
-                        </h1>
-                        <p class="animated1">Daftarkan dan promosikan usaha ekonomi kreatifmu  secara resmi <br> di Dinas Pariwisata dan Kebudayaan Kabupaten Jember</p>	
-                    </div>
-                </div>
-            </div>
-            <!--/ Carousel item end -->
-        </div>
-        <!-- Carousel inner end-->
-
-        <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#main-slide" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#main-slide" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    </section>
       <!-- <div id="main-slide" class="carousel slide" data-ride="carousel">
         
         <ol class="carousel-indicators">
@@ -188,8 +101,9 @@
         </a>
       </div> -->
     <!-- End Hero -->
-
+      <main id="main">
           @yield('content')
+      </main>
       <!-- End berita Section -->
     <!-- FOOTER -->
     <footer class="style-1 d-flex flex-row p-3">

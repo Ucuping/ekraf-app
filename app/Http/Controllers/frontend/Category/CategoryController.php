@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    public function index()
+    {
+        $data = [
+            'title' => 'Sub Kategori',
+            'categories' => Category::all()
+        ];
+
+        return view('frontend.category.index', $data);
+    }
     public function detail(Category $category)
     {
         $data = [

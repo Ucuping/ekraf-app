@@ -1,6 +1,59 @@
 @extends('frontend.layouts.base')
 
 @section('content')
+<!-- ======= Hero Section ======= -->
+<section id="page-top">
+    <div id="main-slide" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#main-slide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#main-slide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <!--/ Indicators end-->
+
+      <!-- Carousel inner -->
+      <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+              <img class="img-responsive" src="{{ asset('assets1/img/Jfc3.png') }}" alt="slider">
+              <div class="slider-content">
+                  <div class="col-md-12 text-center">
+                      <h1 class="animated3">
+                          <span><strong>Selamat Datang</strong> di Prokraf Jember</span>
+                      </h1>
+                      <p class="animated2">Pengembangan sistem informasi pemasaran ekonomi kreatif menuju <br> smart goverment untuk mengoptimalkan fleksibilitas <br> kreatifitas dan produktivitas</p>	
+                      <a href="#subsector" class="page-scroll btn animated1">Selengkapnya</a>
+                  </div>
+              </div>
+          </div>
+          <!--/ Carousel item end -->
+          
+          <div class="carousel-item">
+              <img class="img-responsive" src="{{ asset('assets1/img/jff.jfif') }}" alt="slider">
+              <div class="slider-content">
+                  <div class="col-md-12 text-center">
+                      <h1 class="animated2">
+                          <span>Daftarkan Prokraf mu <strong>Sekarang</strong></span>
+                      </h1>
+                      <p class="animated1">Daftarkan dan promosikan usaha ekonomi kreatifmu  secara resmi <br> di Dinas Pariwisata dan Kebudayaan Kabupaten Jember</p>	
+                  </div>
+              </div>
+          </div>
+          <!--/ Carousel item end -->
+      </div>
+      <!-- Carousel inner end-->
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#main-slide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#main-slide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+  </section>
     <!-- Start subsector Section -->
     <section id="subsector" class="feature-section">
         <div class="container">
@@ -17,10 +70,10 @@
                 @foreach ($categories as $item)
                     <div class="col-md-2 col-sm-6 col-xs-12">
                         <div class="feature">
-                            {{-- <i class="fa fa-briefcase"></i> --}}
+                            <i class="{{ $item->icon }}"></i>
                             <div class="feature-content">
                                 <h4>{{ $item->name }}</h4>
-                                {{-- <p> Startup adalah sebuah usaha yang baru berjalan dan...</p> --}}
+                                <p> {{ substr($item->description, 0, 50) }}...</p>
                                 <a href="{{ route('categories.detail', $item->hashid) }}" class="btn ">Selengkapnya</a>
                             </div>
                         </div>
