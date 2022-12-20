@@ -51,7 +51,7 @@
       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
         <div class="swiper-wrapper">
 
-            @forelse ($data->company as $item)
+            @forelse ($data->company()->where('status', 'approved')->get() as $item)
             <div class="swiper-slide">
             <div class="testimonial-wrap">
                 <div class="testimonial-item">
