@@ -55,7 +55,7 @@
           <ul>
             <li><a href="{{ route('home') }}">Home</a></li>
             <li><a href="{{ route('categories') }}">Sub Sektor</a></li>
-            <li><a href="{{ route('announcements') }}">Berita</a></li>
+            {{-- <li><a href="{{ route('announcements') }}">Berita</a></li> --}}
             <li><a href="{{ route('auth.register') }}">Daftar</a></li>
             <li><a href="{{ route('auth') }}">Masuk</a></li>
           <i class="bi bi-list mobile-nav-toggle"></i>

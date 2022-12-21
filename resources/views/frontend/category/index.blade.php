@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Start subsector Section -->
-    <section id="subsector" class="feature-section">
+    <section id="subsector" class="feature-section mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
