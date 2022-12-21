@@ -47,8 +47,54 @@
         <h2>{{ $data->name }} JEMBER</h2>
         {{-- <p>{{ $data->name }} JEMBER</p> --}}
       </div>
-
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+            @forelse ($data->company()->where('status', 'approved')->get() as $item)
+                <div class="col-lg-6">
+                    <div class="card bg-white mt-n4 mx-n4 mt-5 mb-4">
+                        <div class="bg-soft-info">
+                            <div class="card-body pb-0 px-4">
+                                <div class="row mb-3">
+                                    <div class="col-md">
+                                        <div class="row align-items-center g-3">
+                                            <div class="col-md-auto">
+                                                <div class="avatar-md">
+                                                    <div class="avatar-xl avatar me-3 bg-white rounded-circle">
+                                                        <img src="{{ asset('storage/images/companies/logo/' . $item->logo) }}" alt=""
+                                                            class="avatar-xs">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div>
+                                                    <h4 class="fw-bold">
+                                                        <a href="{{ route('companies.detail', $item->hashid) }}" class="text-dark">{{ $item->name }}</a>
+                                                    </h4>
+                                                    <div class="hstack gap-3 flex-wrap">
+                                                        <div><i class="fas fa-store-alt me-1"></i> {{ $item->category->name }}</div>
+                                                        <div class="vr"></div>
+                                                        <div><i class="fas fa-id-card-alt me-1"></i> {{ $item->haki_number ?? '-' }}</div>
+                                                        <div class="vr"></div>
+                                                        <div>
+                                                            <i class=" fas fa-map-marker-alt me-1"></i> {{ $item->address }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end card body -->
+                        </div>
+                    </div>
+                    <!-- end card -->
+                </div>
+                <!-- end col -->
+            @empty
+                <span>-</span>
+            @endforelse
+        </div>
+      {{-- <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
         <div class="swiper-wrapper">
 
             @forelse ($data->company()->where('status', 'approved')->get() as $item)
@@ -71,7 +117,7 @@
             @endforelse
         </div>
         <div class="swiper-pagination"></div>
-      </div>
+      </div> --}}
 
     </div>
   </section><!-- End Testimonials Section -->
