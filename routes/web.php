@@ -105,9 +105,9 @@ Route::prefix('companies')->group(function () {
     Route::get('{company}/detail', [CompanyCompanyController::class, 'detail'])->name('companies.detail');
 });
 
-// Route::get('/announcements', function () {
-//     // return view('frontend.announcement.index', ['title' => 'Berita']);
-// })->name('announcements');
+Route::get('/announcements', function () {
+    return view('frontend.announcement.index', ['title' => 'Berita']);
+})->name('announcements');
 
 Route::get('/auth', [AuthController::class, 'index'])->name('auth')->middleware('guest');
 Route::get('/auth/check', [AuthController::class, 'check'])->name('auth.check');
