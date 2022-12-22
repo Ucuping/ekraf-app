@@ -60,7 +60,7 @@
                                             <p>{{ $data->description }}</p>
         
                                             <ul class="ps-4 vstack gap-2">
-                                                <li>NIK Pemilik : {{ $data->owner_identification_number }}</li>
+                                                {{-- <li>NIK Pemilik : {{ $data->owner_identification_number }}</li> --}}
                                                 <li>Nama Pemilik : {{ $data->owner_name }}</li>
                                             </ul>
         
