@@ -27,7 +27,7 @@
                                                 <div class="hstack gap-3 flex-wrap">
                                                     <div><i class="fas fa-store-alt me-1"></i> {{ $data->category->name }}</div>
                                                     <div class="vr"></div>
-                                                    <div><i class="fas fa-id-card-alt me-1"></i> {{ $data->haki_number ?? '-' }}</div>
+                                                    <div><i class="fas fa-user me-1"></i> {{ $data->owner_name }}
                                                     <div class="vr"></div>
                                                     <div>
                                                         <i class=" fas fa-map-marker-alt me-1"></i> {{ $data->address }}
@@ -59,10 +59,10 @@
                                             <h6 class="mb-3 fw-semibold text-uppercase">Deskripsi</h6>
                                             <p>{{ $data->description }}</p>
         
-                                            <ul class="ps-4 vstack gap-2">
+                                            {{-- <ul class="ps-4 vstack gap-2"> --}}
                                                 {{-- <li>NIK Pemilik : {{ $data->owner_identification_number }}</li> --}}
-                                                <li>Nama Pemilik : {{ $data->owner_name }}</li>
-                                            </ul>
+                                                {{-- <li>Nama Pemilik : {{ $data->owner_name }}</li> --}}
+                                            {{-- </ul> --}}
         
                                             <div class="pt-3 border-top border-top-dashed mt-4">
                                                 <div class="row">
