@@ -35,6 +35,7 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets1/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets1/css/boostrap-custom.css') }}" rel="stylesheet" />
 
     <!-- =======================================================
   * Template Name: Mentor - v4.9.1

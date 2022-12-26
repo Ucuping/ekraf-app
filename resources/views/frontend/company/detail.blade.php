@@ -27,7 +27,7 @@
                                                 <div class="hstack gap-3 flex-wrap">
                                                     <div><i class="fas fa-store-alt me-1"></i> {{ $data->category->name }}</div>
                                                     <div class="vr"></div>
-                                                    <div><i class="fas fa-user me-1"></i> {{ $data->owner_name }}
+                                                    <div><i class="fas fa-user me-1"></i> {{ $data->owner_name }}</div>
                                                     <div class="vr"></div>
                                                     <div>
                                                         <i class=" fas fa-map-marker-alt me-1"></i> {{ $data->address }}
